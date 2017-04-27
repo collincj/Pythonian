@@ -2,24 +2,29 @@
 def UPARK():
         pass
 
-        #state what the program does
+        #Introduction messages
         print("\nThis program tells JMU students what equipment they are renting at UPARK.\n")
 
         print("Enter Current Credits")
 
+        #Start message; Enter credits that you are currently enrolled in
         start = float(input("\nHow many credits do you have? Enter credits :"))
         if start >= 7 :
-                print("\nChoose one of the equipment options below.\n")
+                print("\nChoose one of the equipment options below.\n") #prints the direction message
         elif start < 7 :
-                print("\nInsufficient Credits.")
-                quit("\nUPARK")
+                print("\nInsufficient Credits. You must be at least a part time \
+student (7 credits) to enter UPARK. Have a nice day!") #Not enough credits to enter UPARK
+                quit() #quits the program
 
-        equipment = ["Soccerball = 1, Basketball = 2, Football = 3, Tennis Racquets = 4, Volleyball = 5, Cornhole Boards = 6, Tennis Balls = 7"]
+#Displays an array of options with numerical values to be entered in the next step
+        equipment = ["Soccerball = Enter: 1, Basketball = Enter: 2,\
+Football = Enter: 3, Tennis Racquets = Enter: 4, Volleyball = Enter: 5, \
+Cornhole Boards = Enter: 6, Tennis Balls = Enter: 7"]
         print(equipment)
 
 
         #define what equipment you want to rent out
-        int(input("Please enter the equipment you wish to rent: "))
+        float(input("Please enter the equipment you wish to rent: "))
         if input == 1:
                         print("\nYou have rented the Soccerball.")
         elif input == 2:
@@ -36,44 +41,47 @@ def UPARK():
                         print("\nYou have rented the Tennis Balls.")
 
                         print("\nPlease look at the options below.\n")
-        print("1 hour = 8")
-        print("2 hours = 9")
-        print("3 hours = 10")
-        print("4 hours = 11")
-        print("5 hours = 12")
-        print("1 day = 13")
-        print("2 days = 14")
-        print("3 days = 15")
 
-                #define how long you want to rent the equipment out for
+        #Displays values for rental times
+        print("Rent 1 hour = 8")
+        print("Rent 2 hours = 9")
+        print("Rent 3 hours = 10")
+        print("Rent 4 hours = 11")
+        print("Rent 5 hours = 12")
+        print("Rent 1 day = 13")
+        print("Rent 2 days = 14")
+        print("Rent 3 days = 15")
+
+#rentop = ["Rent for 1 hour = Enter: 8, Rent for 2 hours = Enter: 9,\
+#Rent for 3 hours = Enter: 10, Rent for 4 hours = Enter: 11, Rent for 5 hours = Enter: 12, \
+#Rent for 1 day = Enter: 13, Rent for 2 days = Enter: 14, Rent for 3 days = Enter: 15"]
+#print(rentop)
+
+        #define how long you want to rent the equipment out for
         renttime = float(input("Please enter the time for how long you want to rent the equipment out for. :"))
+        if renttime < 8 or renttime > 15:
+            print("\nInvalid entry. Please enter a number-option between 8 and 15.")
+            renttime = float(input("Re-enter a number-option for rental time here:"))
+
+        if renttime < 8 or renttime > 15:
+            print("\nInvalid entry. Please enter a number-option between 8 and 15.")
+            renttime = float(input("Re-enter a number-option for rental time here:"))
+            
+        if renttime < 8 or renttime > 15:
+                        print("\nInvalid entry. Number of rental attempts exceeded. Goodbye.")
         if renttime == 8:
-                #elif equipment != 6:
-                        #print("\nYou have rented your equipment for the alotted time.")
-                        print("\nYou have rented your equipment for 1 hour. Thank you for using this program.\n")
+                        print("\nYou have rented your equipment for 1 hour.\n")
         if renttime == 9:
-                        print("\nYou have rented your equipment for 2 hours. Thank you for using this program.\n")
+                        print("\nYou have rented your equipment for 2 hours.\n")
         if renttime == 10:
-                        print("\nYou have rented your equipment for 3 hours. Thank you for using this program.\n")
+                        print("\nYou have rented your equipment for 3 hours.\n")
         if renttime == 11:
-                        print("\nYou have rented your equipment for 4 hours. Thank you for using this program.\n")
+                        print("\nYou have rented your equipment for 4 hours.\n")
         if renttime == 12:
-                        print("\nYou have rented your equipment for 5 hours. Thank you for using this program.\n")
+                        print("\nYou have rented your equipment for 5 hours.\n")
 
-        #if renttime > 7 and renttime <= 12:
-        #                print("You may not rent the Kayak for these times. Please choose a time in days.")
-        #elif equipment == 1 and renttime <= 12:
-        #                print("You have rented the Soccerball at this time.\n")
-        #elif renttime < 17:
-         #               print("You may not go to rent at this time, please choose another time.\n")
-
-
-        #define what time you want to rent your equipment
-        if renttime > 12 and renttime <= 15:
-                renttime = float(input("Please re-enter the time at which you would like to rent your equipment:"))
-        #if renttime > 12 and renttime <= 15:
-                print("\nYou may rent. Thank you for using this program.\n")
-                quit("\n Enjoy your time at UPARK")
+        print("\nYou successfully rented equipment. Thank you for using this program.\n")
+        quit("\n Enjoy your time at UPARK")
         #elif renttime > 31:
          #       print("You may not to rent at this time.\n")
         #elif renttime < 14:
