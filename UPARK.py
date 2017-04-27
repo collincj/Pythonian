@@ -1,9 +1,8 @@
 #define the function
-def UPARK():
-        pass
+class UPARK():
 
         #Introduction messages
-        print("\nThis program tells JMU students what equipment they are renting at UPARK.\n")
+        print("\nThis program guides JMU students through equipment rental at UPARK.\n")
 
         print("Enter Current Credits")
 
@@ -52,13 +51,9 @@ Cornhole Boards = Enter: 6, Tennis Balls = Enter: 7"]
         print("Rent 2 days = 14")
         print("Rent 3 days = 15")
 
-#rentop = ["Rent for 1 hour = Enter: 8, Rent for 2 hours = Enter: 9,\
-#Rent for 3 hours = Enter: 10, Rent for 4 hours = Enter: 11, Rent for 5 hours = Enter: 12, \
-#Rent for 1 day = Enter: 13, Rent for 2 days = Enter: 14, Rent for 3 days = Enter: 15"]
-#print(rentop)
-
         #define how long you want to rent the equipment out for
         renttime = float(input("Please enter the time for how long you want to rent the equipment out for. :"))
+        #Starts a three step recursive loop for invalid entries
         if renttime < 8 or renttime > 15:
             print("\nInvalid entry. Please enter a number-option between 8 and 15.")
             renttime = float(input("Re-enter a number-option for rental time here:"))
@@ -66,9 +61,11 @@ Cornhole Boards = Enter: 6, Tennis Balls = Enter: 7"]
         if renttime < 8 or renttime > 15:
             print("\nInvalid entry. Please enter a number-option between 8 and 15.")
             renttime = float(input("Re-enter a number-option for rental time here:"))
-            
+
         if renttime < 8 or renttime > 15:
                         print("\nInvalid entry. Number of rental attempts exceeded. Goodbye.")
+        #loop ends after three tries
+
         if renttime == 8:
                         print("\nYou have rented your equipment for 1 hour.\n")
         if renttime == 9:
@@ -79,12 +76,15 @@ Cornhole Boards = Enter: 6, Tennis Balls = Enter: 7"]
                         print("\nYou have rented your equipment for 4 hours.\n")
         if renttime == 12:
                         print("\nYou have rented your equipment for 5 hours.\n")
+        if renttime == 13:
+                        print("\nYou have rented your equipment for 1 day.\n")
+        if renttime == 14:
+                        print("\nYou have rented your equipment for 2 days.\n")
+        if renttime == 15:
+                        print("\nYou have rented your equipment for 3 days.\n")
 
-        print("\nYou successfully rented equipment. Thank you for using this program.\n")
+        print("\nYou successfully rented equipment from UPARK. Thank you for using this program.\n")
         quit("\n Enjoy your time at UPARK")
-        #elif renttime > 31:
-         #       print("You may not to rent at this time.\n")
-        #elif renttime < 14:
-         #       print("You may not rent at this time.\n")
+
 
 UPARK()
