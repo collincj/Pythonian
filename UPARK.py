@@ -15,7 +15,7 @@ class UPARK():
 student (7 credits) to enter UPARK. Have a nice day!") #Not enough credits to enter UPARK
                 quit() #quits the program
 
-#Displays an array of options with numerical values to be entered in the next step
+#Displays a homogeneous array of options with numerical values to be entered in the next step
         equipment = ["Soccerball = Enter: 1, Basketball = Enter: 2,\
 Football = Enter: 3, Tennis Racquets = Enter: 4, Volleyball = Enter: 5, \
 Cornhole Boards = Enter: 6, Tennis Balls = Enter: 7"]
