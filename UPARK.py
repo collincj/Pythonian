@@ -4,7 +4,7 @@ class UPARK():
         #Introduction messages
         print("\nThis program guides JMU students through equipment rental at UPARK.\n")
 
-        print("Enter Current Credits")
+        print("Swipe your JAC and follow the instructions.")
 
         #Start message; Enter credits that you are currently enrolled in
         start = float(input("\nHow many credits do you have? Enter credits :"))
