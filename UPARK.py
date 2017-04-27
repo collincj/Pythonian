@@ -63,7 +63,8 @@ Cornhole Boards = Enter: 6, Tennis Balls = Enter: 7"]
             renttime = float(input("Re-enter a number-option for rental time here:"))
 
         if renttime < 8 or renttime > 15:
-                        print("\nInvalid entry. Number of rental attempts exceeded. Goodbye.")
+                        print("\nInvalid entry. Number of rental attempts exceeded. Re-swipe your JAC.")
+                        quit()
         #loop ends after three tries
 
         if renttime == 8:
