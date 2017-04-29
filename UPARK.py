@@ -12,13 +12,13 @@ class UPARK():
                 print("\nChoose one of the equipment options below.\n") #prints the direction message
         elif start < 7 :
                 print("\nInsufficient Credits. You must be at least a part time \
-student (7 credits) to enter UPARK. Have a nice day!") #Not enough credits to enter UPARK
+                student (7 credits) to enter UPARK. Have a nice day!") #Not enough credits to enter UPARK
                 quit() #quits the program
 
 #Displays a homogeneous array of options with numerical values to be entered in the next step
         equipment = ["Soccerball = Enter: 1, Basketball = Enter: 2,\
-Football = Enter: 3, Tennis Racquets = Enter: 4, Volleyball = Enter: 5, \
-Cornhole Boards = Enter: 6, Tennis Balls = Enter: 7"]
+        Football = Enter: 3, Tennis Racquets = Enter: 4, Volleyball = Enter: 5, \
+        Cornhole Boards = Enter: 6, Tennis Balls = Enter: 7"]
         print(equipment)
 
 
@@ -67,6 +67,7 @@ Cornhole Boards = Enter: 6, Tennis Balls = Enter: 7"]
                         quit()
         #loop ends after three tries
 
+        #Displays rent period depending on what option one chose above
         if renttime == 8:
                         print("\nYou have rented your equipment for 1 hour.\n")
         if renttime == 9:
@@ -87,5 +88,6 @@ Cornhole Boards = Enter: 6, Tennis Balls = Enter: 7"]
         print("\nYou successfully rented equipment from UPARK. Thank you for using this program.\n")
         quit("\n Enjoy your time at UPARK")
 
+#program ends and displays message
 
 UPARK()
